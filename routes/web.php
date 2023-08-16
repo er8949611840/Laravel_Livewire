@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Livewire\Pages;
+use App\Http\Livewire\ShowPage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', Pages::class)->name('get.page');
+Route::get('/show-page/1', ShowPage::class)->name('show.page');
