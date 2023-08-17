@@ -1,4 +1,5 @@
-<div>
-    asdfasdfasdfasdfasdf
-    {{-- Nothing in the world is as soft and yielding as water. --}}
+<div class="container">
+    <h2 class="mt-2">Title:- {{ $pageInfo->title }}</h2>
+    <h2 class="mt-2">Description:-</h2>
+    <p>{{ $pageInfo->content }}</p>
 </div>

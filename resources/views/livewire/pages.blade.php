@@ -13,7 +13,8 @@
                         <li class="nav-item">
                             {{-- <a class="nav-link" aria-current="page"
                     href="{{ route('show.content', $page->slug) }}">{{ $page->title }}</a> --}}
-                            <a class="nav-link" aria-current="page" href="#">{{ $page->title }}</a>
+                            <a class="nav-link" aria-current="page"
+                                href="{{ route('show.page', $page->slug) }}">{{ $page->title }}</a>
                         </li>
                     @empty
                     @endforelse
@@ -41,7 +42,8 @@
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li> --}}
                 </ul>
-                <button wire:click="addPage" class="btn btn-primary btn-sm float-right">Add New Post</button>
+                <a href="{{ route('create.page') }}" style="text-decoration: none;"
+                    class="btn-primary btn-sm float-right">Add New Post</a>
             </div>
         </div>
     </nav>

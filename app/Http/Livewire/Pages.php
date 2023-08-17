@@ -8,6 +8,8 @@ use Livewire\Component;
 class Pages extends Component
 {
     public $pages;
+    public $updatePage = false;
+    public $addPage = false;
 
     public function render()
     {
