@@ -16,4 +16,14 @@ class Page extends Model
     {
         return $query->whereNull('page_id');
     }
+
+    public function parent()
+    {
+        return $this->hasOne(Page::class, 'id', 'page_id');
+    }
+
+    public function children()
+    {
+        return $this->hasMany(Page::class, 'page_id', 'id');
+    }
 }

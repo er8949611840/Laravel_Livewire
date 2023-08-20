@@ -13,7 +13,7 @@ class Pages extends Component
 
     public function render()
     {
-        $this->pages = Page::GetOnlyParent()->get();
+        $this->pages = Page::GetOnlyParent()->with('children')->get();
 
         return view('livewire.pages');
     }

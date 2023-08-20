@@ -9,8 +9,14 @@ class ShowPage extends Component
 {
     public $pageInfo;
 
-    public function mount($slug)
+    public function mount($slug, $child = null, $subchild = null)
     {
+        if (!empty($child)) {
+            $slug = $child;
+        }
+        if (!empty($subchild)) {
+            $slug = $subchild;
+        }
         $this->pageInfo = Page::where('slug', $slug)->first();
     }
 
